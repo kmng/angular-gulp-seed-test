@@ -1,10 +1,24 @@
+<form>
+<div class="form-group row">
+     <label for="description" class="col-sm-2 col-form-label" >Description</label>
+      <div class="col-sm-5">
+    <input type="text" class="form-control" name="description" ng-model="vm.newTodo.description" />
+  </div>
+</div>
+  <div class="col-sm-4 pull-right"></div>
+    <button type="button" class="btn btn-primary pull-right" ng-click="vm.save()">add</button>
+    <div class="form-group row">
+
+    </div>
+</form>
+
 <table class="table">
     <tbody>
         <tr ng-repeat="t in vm.todos">
-            <td>
+            <td class="col-sm-5">
                 {{t.description}}
             </td>
-            <td>
+            <td class="col-sm-2">
                 <input type="checkbox" ng-model="t.done" ng-click="vm.update(t)" />
             </td>
             <td>
