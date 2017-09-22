@@ -7,9 +7,15 @@
         <p class="lead">
             <br> Quickstart project for Angular + Gulp
         </p>
-    </div>    
+    </div>
 	<div>
-        <todo />
+        <div ng-switch="main.authenticated">
+          <div ng-switch-when="true">
+          <todo />
+        </div>
+        <div ng-switch-when="false">
+          <div ng-include="'app/main/login.html'"></div>
+      </div>
+
     </div>
 </div>
-
