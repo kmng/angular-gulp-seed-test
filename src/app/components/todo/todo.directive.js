@@ -33,7 +33,7 @@
         return directive;
 
         /** @ngInject */
-        function TodoController(Todo, $window) {
+        function TodoController(Todo) {
 
 
 	   	var vm = this;
